@@ -1,0 +1,1 @@
+tiempo n** ya que ocupe bbublesort, mas los for de n cada vez que recorrie el arreglo

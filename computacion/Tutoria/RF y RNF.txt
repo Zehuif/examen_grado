@@ -1,0 +1,67 @@
+RF1.-
+Descripcion: Componente para asignar las salas para las tutorias
+Entrada: El sistema debe permitir que se asignen salas y profesores para impartir una tutoria, pudiendo asignar un profesor a una sala especifica
+Salida: Es sistema ingresa los datos y muestra un mensaje exitoso 
+Catergoria: Evidente
+Prioridad: Alta
+
+RF2.-
+Descripcion: Componente para asignar fechas para las tutorías
+Entrada: Horarios de un profesor con su nombre y cuantas clases tienen agendadas en la semana y en que horario. Además de la semana en la que se busca hacer las dos tutorías.
+Salida: El sistema muestra posibles horarios para las tutorías de ese profesor.
+Catergoria: Evidente
+Prioridad: Alta
+
+RF3.-
+Descripcion: El sistema de interfaz debe permitir  que el usuario perteneciente a recursos humanos pueda visualizar las horas asignadas a los docentes, para la gestión de las remuneraciones
+Entrada: 
+Salida: 
+Catergoria: Evidente
+Prioridad: Media
+
+RF4.-
+Descripcion: Es sistema debe permitir inscribir a los profesores
+Entrada: Se muestra un formulario en el cual debe rellenar los datos del Profesor y elegir las tutorias las cuales impartira
+Salida: El sistema inscribe al profesor a la tutoria y muestra un mensaje exitoso.
+Catergoria: Evidente
+Prioridad: Alta
+
+
+
+RNF1.-
+ID:1
+Nombre: Despliegue de información
+Prioridad: Media
+Catergoria: Obligatoria
+Descripcion: La interfaz podrá ser ingresada por diferentes navegadores
+Catacteristica: Portabilidad
+Sub-caracteristica: Adaptabilidad
+
+
+
+RNF2.-
+ID:2
+Nombre: Credenciales cifradas
+Prioridad: Alta
+Catergoria: Obligatoria
+Descripcion: Las contraseñas deben estar encriptadas en la base de datos.
+Catacteristica: Funcionalidad
+Sub-caracteristica: Seguridad
+
+RNF3.-
+ID:3
+Nombre: Tiempo de aprendizaje del sistema
+Prioridad: Medio
+Catergoria: Obligatoria
+Descripcion: El sistema tendrá un lenguaje sencillo de comprender, por cualquier tipo de usuario
+Catacteristica: Usabilidad 
+Sub-caracteristica: Aprendibilidad
+
+RNF4.-
+ID:4
+Nombre: Adaptable para Pc, Tablets, Smarthphone
+Prioridad: Media
+Catergoria: Obligatoria
+Descripcion: La interfaz podrá ser ingresada por diferentes dispositivos en el cual se adaptara para este tamaño
+Catacteristica: Portabilidad
+Sub-caracteristica: Adaptabilidad

@@ -1,0 +1,20 @@
+A.- 
+
+Para la atencion de los clientes tendra que haber un mecaniscmo de sincronizacion en la cual cada cliente es
+un thread en el cual entrara a un semaforo que representa cada mesa del local por lo que cada cliente tendra
+solo 1 mesa.
+Para la atencion de los garzones a las mesas utilizare el mismo enfoque en el cual sera un semaforo distinto
+el cual referencia a las mismas mesas pero en este solo entrara un garzon, suponiendo que solo un garzon esta 
+asignado por mesa.
+Para la atencion de los pedidos por parte de los cocineros utilizare cada pedido como un thread y los cocinero
+se dividiran los pedidos con un semaforo en el cual reresentara cada orden siendo preparada por algun chef, ademas
+utilizare un mutex dentro de este para representar herramientas o cocinas etc que deban ser compartidas entre los
+cocineros.
+
+B.- 
+
+1.-Para la atencion de los clientes utilizare una concurrencia de FIFO primero en llegar primero en salir
+aunque una persona halla reservado ya que ese es un beneficio que hace que solo entre rapidpo al restauran
+ a ser atendido y no pase esperando fuera.
+Por lo que finalmente la primera persona en pedir sera el primer pedido en ser realizado en la cocinar
+Ademas de que la comida no puede ser interrumpida una vez comenzado el proceso por lo que hay que terminarla

@@ -1,0 +1,62 @@
+SOA:
+La arquitectura SOA (Service-Oriented Architecture) es un enfoque de diseño de sistemas de software que se basa en el uso de servicios independientes para integrar aplicaciones y funcionalidades de manera más efectiva. En lugar de crear aplicaciones monolíticas que realizan todas las tareas en una sola aplicación, SOA se basa en la creación de servicios independientes que se pueden llamar en cualquier momento para realizar una tarea específica.
+Los beneficios de SOA incluyen:
+Reutilización: los servicios se pueden reutilizar en múltiples aplicaciones, lo que permite una mayor eficiencia y reducción de costos.
+Flexibilidad: los servicios se pueden combinar y reorganizar de diferentes maneras para crear nuevas aplicaciones o mejorar las existentes.
+Interoperabilidad: los servicios se pueden crear utilizando diferentes tecnologías y lenguajes de programación, lo que permite una mayor interoperabilidad entre sistemas heterogéneos.
+Escalabilidad: los servicios se pueden escalar de manera independiente, lo que permite una mayor flexibilidad y capacidad de respuesta en entornos de alta demanda.
+Mantenimiento: los servicios se pueden mantener y actualizar de manera independiente sin afectar otras partes del sistema, lo que permite un mantenimiento más sencillo y menos costoso.
+
+Cliente servidor:
+Cliente-servidor es un modelo de arquitectura de software en el que un cliente envía solicitudes a un servidor,
+y el servidor procesa esas solicitudes y devuelve una respuesta al cliente.
+Este modelo se utiliza comúnmente en aplicaciones distribuidas y se basa en el principio de separación de responsabilidades.
+El beneficio principal de esta arquitectura es que permite una mayor escalabilidad y flexibilidad en el desarrollo de aplicaciones.
+Los servidores pueden ser diseñados y optimizados para manejar grandes cantidades de datos y solicitudes de clientes,
+mientras que los clientes pueden ser desarrollados en diferentes lenguajes y plataformas para adaptarse a las necesidades específicas del usuario.
+Además, el modelo cliente-servidor facilita la administración de seguridad y la implementación de medidas de protección contra amenazas,
+ya que los servidores pueden centralizar la gestión de los datos y aplicar políticas de seguridad de manera efectiva
+
+
+
+En resumen, mientras que la arquitectura de software se enfoca en la organización general del sistema y los principios que guían la toma de decisiones de diseño, los patrones de diseño proporcionan soluciones reutilizables a problemas específicos de diseño que pueden surgir en diferentes sistemas de software. La arquitectura de software y los patrones de diseño son complementarios y se utilizan juntos para crear sistemas de software robustos y escalables.
+
+Aquí te presento algunos ejemplos comunes de arquitecturas de software y patrones de diseño:
+
+Arquitecturas de software:
+
+Arquitectura de capas: Separación de la lógica del negocio en capas lógicas, como la capa de presentación, la capa de lógica del negocio y la capa de datos.
+
+Arquitectura basada en servicios: Los servicios son componentes autónomos que se comunican entre sí a través de interfaces definidas.
+
+Arquitectura basada en eventos: El sistema responde a los eventos que ocurren en el entorno y produce nuevos eventos.
+
+Arquitectura cliente-servidor: Separación de la lógica del negocio en un servidor y una interfaz de usuario cliente.
+
+Arquitectura orientada a microservicios: Un enfoque para construir aplicaciones como suites de pequeños servicios independientes.
+
+Patrones de diseño:
+
+Patrón de diseño de fábrica: Proporciona una interfaz para crear objetos en una superclase, pero permite que las subclases alteren el tipo de objeto que se creará.
+
+Patrón de diseño de adaptador: Permite que dos interfaces incompatibles trabajen juntas mediante la creación de un objeto que actúa como un adaptador entre ellos.
+
+Patrón de diseño de observador: Define una dependencia entre objetos de tal manera que cuando un objeto cambia de estado, todos los objetos dependientes son notificados y actualizados automáticamente.
+
+Patrón de diseño de proxy: Proporciona un objeto representante o sustituto de otro objeto para controlar el acceso a él.
+
+Patrón de diseño de singleton: Garantiza que solo haya una instancia de una clase en toda la aplicación.
+
+Patrón de diseño de estrategia: Define una familia de algoritmos, encapsula cada uno y los hace intercambiables.
+
+Patrón de diseño de cadena de responsabilidad: Permite que varios objetos manejen una solicitud sin conocer los detalles de los demás objetos en la cadena.
+
+Estos son solo algunos ejemplos de arquitecturas de software y patrones de diseño comunes que se utilizan en el desarrollo de software. Hay muchos más patrones y arquitecturas que se utilizan en diferentes contextos y situaciones de diseño.
+[23:08]
+SOA (Arquitectura Orientada a Servicios) es un estilo de arquitectura de software que se basa en la creación y uso de servicios como componentes fundamentales del sistema. Los servicios en SOA son unidades de funcionalidad que se exponen a través de interfaces estandarizadas y se pueden acceder a través de redes.
+
+En SOA, los servicios son componentes autónomos y pueden ser desarrollados, desplegados y gestionados de forma independiente. Estos servicios se comunican entre sí a través de interfaces estandarizadas, como el Protocolo de Acceso a Objetos Basado en Web (SOAP) o el Protocolo de Transferencia de Estado Representacional (REST).
+
+Una de las principales ventajas de SOA es su capacidad para mejorar la flexibilidad, la escalabilidad y la reutilización de los sistemas de software. Debido a que los servicios son independientes y se comunican a través de interfaces estandarizadas, es más fácil agregar nuevas funcionalidades al sistema y escalarlo para manejar cargas de trabajo crecientes. Además, los servicios se pueden reutilizar en diferentes aplicaciones y contextos, lo que reduce el tiempo y el costo de desarrollo.
+
+SOA se ha convertido en una de las arquitecturas de software más populares en la actualidad y es utilizada por muchas empresas en todo el mundo para desarrollar sistemas de software de alta calidad y escalables.

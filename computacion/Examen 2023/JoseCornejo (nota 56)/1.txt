@@ -1,0 +1,67 @@
+supuestos: 
+
+El restaurant tiene administradores que son los profesores qsuienes tienen las gestion 
+y planificacion del restaurante
+
+Historias de Usuario
+
+Como garzon del restaurante
+quiero atender las mesas del recinto
+para que los clientes puedan realizar sus pedidos
+
+Como cocinero del restaurante
+quiero preparar los platos de comida
+para que los garzones se los entregue a los clientes
+
+Como administrador del local 
+quiero gestionar el personal del restaurant
+para poder brindar un buen servicio
+
+Como administrador del local
+quiero gestionar el inventario del restaurant
+para llevar un control de los recursos que tenemos 
+
+Como administrador del local 
+quiero gestionar y administrar las reservas del local
+para atender de forma correcta a los clientes y asegurar su comida
+
+
+Requisitos No Funcionales
+
+#La idea de esta pagina con los requisitos no funcionales es que logre ser atractiva y funcional
+para los clientes que busquen entrar y tengan ganas de realizar pedidos en la pagina del 
+restaurante
+
+ID: RNF1
+Caracteristica: Funcionalidad 
+Sub-Caracteristica: Seguridad
+Descripcion: La pagina debe contar con constraseñas encriptadas para evitar el acceso no permitido
+Categoria: Obligatoria
+
+ID: RNF2
+Caracteristica: Funcionalidad 
+Sub-Caracteristica: Disponibilidad
+Descripcion: La aplicación debe tener una alta disponibilidad.
+Categoria: Obligatoria
+
+ID: RNF3
+Caracteristica: Funcionalidad 
+Sub-Caracteristica: accesibilidad
+Descripcion: La página debe ser compatible tanto para ordenadores como dispositivos móviles.
+Categoria: Obligatoria
+
+ID: RNF4
+Caracteristica: Funcionalidad 
+Sub-Caracteristica: atractividad
+Descripcion: La página debe ser fácil de usar tanto para el cliente, proveedor y administrador.
+Categoria: Obligatoria
+
+ID: RNF5
+Caracteristica: Eficiencia 
+Sub-Caracteristica: Tiempo de respuesta
+Descripcion: La validación de las credenciales no debe tardar más de 10 segundos.
+Categoria: Obligatoria
+
+
+
+

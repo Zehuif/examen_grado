@@ -1,0 +1,14 @@
+Justificacion de Modelo relacional:
+
+-Se realiza este modelo relacional donde solo un administrador puede gestionar las reservas
+-Existe un inventario el cual es gestionado por los administradores y dentro tiene muchos recursos
+-este inventarios tambien es accedido por los cocineros ya que necesitan los recursos para cocinar
+-una reserva esta asignada a una mesas
+-las mesas pueden tener varios pedidos pero solo uno por vez (osea que si el cliente x se atiente el todo lo hace en ese pedido)
+-los platos tienen un tiempo de preparacion
+-los pedidos tienene el atributo de tiempo que dice cuanto demoro en ser entregado el pedido
+-Varios cocineros van preparando el pedido entonces da igual el cocinero que este asociado a la preparacion (osea pueden ser varios)
+-existe la tabla plato que tiene la lista de precios 
+-asumo que no se sabe que recursos tiene el plato por lo que no uni la tabla de plato con los recursos (eso es la maestria del Cocinero saberlo)
+-El pedido esta a cargo de un garzon
+-Entre platos y cocinero hay un N a M por lo que utilizare una nueva tabla que una las 2 la cual tendra como llave foranea la ID del plato y del cocinero

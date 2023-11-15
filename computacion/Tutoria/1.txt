@@ -1,0 +1,11 @@
+Como coordinardor de examenes
+Quiero asignar las fechas para el examen y reservar las salas
+Para que los alumnos puedan realizar el examen
+
+Como responsable de la elaboracion del Examen
+Quiero crear el examen y fijar las fechaslimites de entrega de este
+Para comenzar a fijar las fechas de examen y material de este.
+
+Como responsable de evaluar el Examen
+Quiero evaluar el examen con los criterios puestos
+Para que los alumnos puedan saber si han aprobado o no el examen

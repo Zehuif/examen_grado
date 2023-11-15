@@ -1,0 +1,3 @@
+ya que son carreras, el algoritmo a utilizar no debe ser expropiativo ya que no se puede dejar una serie a la mitad,
+por lo tabnto nos queda first come first served y shortest job first, pero por ejemplo en una clasificacion, no se saben los tiempos de cada uno,
+por lo que no importaria el tiempo de ejecucion de la serie osea se ocuparia el primero que venga "first come first served" .

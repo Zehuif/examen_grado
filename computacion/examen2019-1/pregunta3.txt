@@ -1,0 +1,27 @@
+Para balancear la carga se puede visualizar una solución usando herramientas de sincronización
+
+Antes de ver la solución propuesta se deben definir las siguientes restricciones:
+-existen 1 o 2 piscinas disponibles dependiendo de la competencia, en el caso de absolutos es solo una, en el caso de ser la masters son 2.
+-existen solo 8 pistas por piscina, por lo tanto solo 8 participantes pueden competir en una piscina a la vez.
+-hay n participantes y si n > 8, los primeros 8 llegan a las piscinas.
+
+Se van a obviar las siguientes variables pues no entran en los alcances de la solución de sincronización:
+-no se va a tomar en cuenta el sexo de los participantes.
+-no se va a tomar en cuenta la edad de los participantes.
+-no se va a tomar en cuenta el tipo de carrera (relevo, individual).
+-no se va a tomar en cuenta el estilo de la prueba (mariposa, pecho, espalda, libre).
+
+Entonces la principal problemática viene siendo acomodar a los n participantes en ambas piscinas.
+Las herramientas de sincronización utilizadas para solucionar la problemática es la herramienta de sincronización de semáforos, mutex y la estructura de datos de arreglos.
+
+La composición de la solución viene siendo un mutex que controla el acceso a un arreglo de dimensión 2 con un semáforo en cada valor, osea un arreglo de semáforos,
+cuando el semáforo está en 0 significa que la piscina está ocupada, cuando el semáforo está en 1 significa que la piscina está libre,
+se empieza rellenando la primera piscina, una vez que la piscina 1 se llene, se pasa a rellenar la piscina 2. 
+Una vez llenas ambas piscinas se lockea la inscripción.
+
+Ambos semáforos los cuales se pueden llenar uno a la vez, primero la primera piscina y luego la segunda.
+La dimensión de los semáforos es 8, pues son 8 los participantes que pueden competir en una piscina a la vez. 
+El semáforo se va llenando mediante ingresos de los participantes a la piscina, cuando el semáforo está lleno, se bloquea la entrada.
+
+Cada slot de semáforo está asociado a un lock de mutex, que lleva la información del participante, esto con el fin de poeder identificar a cada participante mientras está en la competencia gracias a las variables globales.
+Cada mutex está abierto hasta que un participante llega a la piscina, y se cierra cuando el participante sale de la piscina.

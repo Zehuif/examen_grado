@@ -1,0 +1,6 @@
+Supuestos
+
+-Los atletas se refiere a deportistas que hacen atletismo
+-Los juegos olimpicos pueden hacerse por un solo páis
+-Suponiendo que todos los deportistan tienen RUT o equivalente
+-suponiendo que se deben almacenar todos los records independiente de fechas

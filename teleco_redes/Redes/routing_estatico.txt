@@ -1,0 +1,82 @@
+Si estás utilizando enrutamiento estático, puedes configurar manualmente las rutas en el Router 1 para indicarle por dónde debe enviar los paquetes para llegar al Router 3.
+
+En el enrutamiento estático, debes especificar las rutas de manera explícita en la tabla de enrutamiento del Router 1. Para indicar al Router 1 cómo enviar los paquetes hacia el Router 3, debes agregar una entrada en la tabla de enrutamiento del Router 1 con la siguiente información:
+
+Dirección de red de destino: la dirección de red a la que pertenece el Router 3.
+Máscara de red: la máscara de red correspondiente a la dirección de red del Router 3.
+Interfaz de salida: la interfaz de salida que el Router 1 utilizará para alcanzar el Router 3.
+Por ejemplo, supongamos que el Router 3 tiene una dirección de red de 192.168.3.0/24 y está conectado al Router 1 a través de la interfaz Ethernet 0. Entonces, en la tabla de enrutamiento del Router 1, agregarías una entrada como esta:
+
+Dirección de red de destino: 192.168.3.0
+Máscara de red: 255.255.255.0 (correspondiente a /24)
+Interfaz de salida: Ethernet 0
+Con esta configuración, el Router 1 sabrá que cualquier paquete destinado a la red 192.168.3.0/24 debe ser enviado a través de la interfaz Ethernet 0 para llegar al Router 3.
+
+Recuerda que en el enrutamiento estático, las rutas deben configurarse manualmente y no se adaptan automáticamente a cambios en la red. Por lo tanto, si hay cambios en la topología o fallas en los enlaces, deberás actualizar manualmente las rutas en el Router 1 para asegurarte de que los paquetes se envíen correctamente hacia el Router 3.
+
+
+
+
+
+User
+si entre r1 y r3 esta conectado un r2 y un r3, por ejemplo r1 conectado a r2 y r4, ye stos ultimos conectados a r3, como configuramos el roputing estatico de r1 para que sepa como llegar al r3?
+ChatGPT
+Si la topología es la siguiente: Router 1 conectado a Router 2 y Router 4, y estos últimos conectados a Router 3, puedes configurar el enrutamiento estático en el Router 1 para que sepa cómo llegar al Router 3.
+
+En el Router 1, debes agregar dos rutas estáticas: una ruta para llegar a Router 2 y otra ruta para llegar a Router 4. Estas rutas se configuran como rutas predeterminadas (o "default") que indicarán al Router 1 que cualquier tráfico no destinado a las redes directamente conectadas se envíe a través de Router 2 o Router 4.
+
+Aquí está un ejemplo de cómo configurar las rutas estáticas en el Router 1:
+
+Ruta hacia Router 2:
+
+Dirección de red de destino: 0.0.0.0
+Máscara de red: 0.0.0.0 (o 0.0.0.0/0)
+Próximo salto (gateway): dirección IP del Router 2
+Interfaz de salida: interfaz conectada al Router 2
+Ruta hacia Router 4:
+
+Dirección de red de destino: 0.0.0.0
+Máscara de red: 0.0.0.0 (o 0.0.0.0/0)
+Próximo salto (gateway): dirección IP del Router 4
+Interfaz de salida: interfaz conectada al Router 4
+Con estas configuraciones, el Router 1 enviará cualquier tráfico no destinado a sus redes locales a través del Router 2 o el Router 4, dependiendo de la ruta más específica.
+
+El Router 2 y el Router 4 deben tener configuradas las rutas correspondientes hacia el Router 3 en sus tablas de enrutamiento. De esta manera, cuando el Router 1 envíe el tráfico hacia el Router 2 o el Router 4, estos routers se encargarán de enrutar los paquetes hacia el Router 3.
+
+Recuerda que, si hay cambios en la topología de la red o se producen fallas en los enlaces, deberás actualizar manualmente las rutas en los routers correspondientes para mantener la conectividad adecuada.
+
+
+
+
+
+User
+osea cualquier ip que no coincida en el  tabla del router 1 se mandara arouter 2 y 4?
+ChatGPT
+En la configuración descrita anteriormente, cuando no haya una coincidencia en la tabla de enrutamiento del Router 1 para una dirección IP específica, se utilizarán las rutas predeterminadas configuradas.
+
+Las rutas predeterminadas, también conocidas como rutas de destino "0.0.0.0", son rutas que se aplican cuando no hay una coincidencia exacta en la tabla de enrutamiento para la dirección de destino del paquete.
+
+En este caso, las rutas estáticas configuradas en el Router 1 hacia los routers Router 2 y Router 4 con la dirección de red de destino "0.0.0.0" y máscara de red "0.0.0.0" (o /0) actúan como rutas predeterminadas.
+
+Esto significa que si una dirección IP de destino en un paquete no coincide con ninguna entrada específica en la tabla de enrutamiento del Router 1, el Router 1 utilizará la ruta predeterminada correspondiente para enviar el paquete al Router 2 o al Router 4, dependiendo de la ruta más específica y con la interfaz de salida correspondiente.
+
+En resumen, cuando no hay una coincidencia exacta en la tabla de enrutamiento del Router 1, las rutas predeterminadas hacia el Router 2 y el Router 4 se utilizan para enviar el tráfico hacia esos routers, lo que les permite continuar el enrutamiento hacia el Router 3 u otras redes correspondientes.
+
+
+
+
+
+User
+y a que router se lo envia primero al 2 o al 4?
+ChatGPT
+En la configuración descrita anteriormente, si tanto el Router 2 como el Router 4 están configurados con rutas predeterminadas en el Router 1, el enrutamiento se basará en la métrica y las reglas de enrutamiento establecidas en el Router 1.
+
+El enrutamiento exacto dependerá de las configuraciones específicas y las métricas asignadas a las rutas predeterminadas hacia el Router 2 y el Router 4 en el Router 1. Las métricas son valores que indican la preferencia o el costo de una ruta.
+
+Si ambas rutas predeterminadas tienen la misma métrica, el Router 1 utilizará otro criterio de selección, como la dirección IP del siguiente salto o la prioridad, para determinar el orden de envío. Sin embargo, esto puede variar según el fabricante y la configuración específica del enrutador.
+
+En general, si las rutas predeterminadas tienen la misma métrica y no hay otros factores de selección que se tengan en cuenta, el Router 1 puede enviar los paquetes a través de ambas rutas, utilizando el balanceo de carga o la alternancia entre rutas. Esto implica que se enviarán paquetes a través del Router 2 y el Router 4 de manera intercalada.
+
+Si deseas un enrutamiento más específico y controlado, puedes configurar diferentes métricas para las rutas predeterminadas hacia el Router 2 y el Router 4 en el Router 1. De esta manera, se establecerá una preferencia para una ruta sobre la otra y se dirigirá el tráfico hacia el Router correspondiente de manera específica.
+
+En resumen, el enrutamiento inicial de los paquetes hacia el Router 2 o el Router 4 dependerá de las métricas y las configuraciones establecidas en el Router 1. Si las rutas predeterminadas tienen la misma métrica, el enrutamiento puede variar según los criterios de selección adicionales o se puede utilizar el balanceo de carga entre las rutas.

@@ -1,0 +1,18 @@
+Caso de estudio: Sistema de gestión de reservas de hotel
+
+Un hotel ha solicitado la creación de un sistema para gestionar las reservas de sus clientes. Se necesita un sistema capaz de:
+
+Permitir a los clientes buscar habitaciones disponibles en una fecha determinada
+Permitir a los clientes reservar una habitación
+Permitir al personal del hotel gestionar las reservas existentes y cancelarlas si es necesario
+Generar informes sobre las reservas realizadas y las habitaciones ocupadas
+
+Preguntas:
+
+¿Cuál es la mejor estructura de datos para almacenar las habitaciones disponibles en una fecha determinada? Justifica tu respuesta.
+
+Diseña un diagrama de clases UML para representar las entidades involucradas en el sistema de gestión de reservas de hotel.
+
+¿Qué algoritmos se pueden utilizar para la búsqueda de habitaciones disponibles en una fecha determinada? Describe cómo funcionan.
+
+¿Qué arquitectura de software se podría utilizar para implementar el sistema de gestión de reservas de hotel? Justifica tu respuesta.

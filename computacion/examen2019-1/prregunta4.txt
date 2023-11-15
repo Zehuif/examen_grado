@@ -1,0 +1,10 @@
+Se supone que nos entregan los resultados de las clasificatorias donde vienen en un 
+Los datos que incluyen seran:
+ -Nombre
+ -Tiempo
+ -ID_participante
+
+ Una vez Recibido una lista de todos los resultados hay que realizar un sort (específicamente quicksort) para ordenar a los participantes
+ desde el que tiene menos tiempo hasta el más lento.
+
+ 

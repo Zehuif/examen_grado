@@ -1,0 +1,55 @@
+¡Hola! Claro, aquí tienes un ejercicio resuelto relacionado con la fibra óptica a nivel universitario:
+
+Ejercicio:
+Una señal óptica con una potencia de entrada de 1 mW se introduce en una fibra óptica de longitud L = 10 km y con una atenuación de 0.2 dB/km. Determine la potencia de salida de la señal al final de la fibra.
+
+Solución:
+
+Convertir la atenuación a unidades lineales:
+Atenuación = 0.2 dB/km = 0.2 * 0.1 dB/m = 0.02 dB/m
+Utilizaremos la fórmula: Atenuación en dB = 10 * log(P2 / P1), donde P1 es la potencia inicial y P2 es la potencia final.
+
+Convertir la atenuación a unidades lineales:
+Atenuación = 10^(Atenuación en dB / 10)
+Atenuación = 10^(0.02 / 10) ≈ 0.9936
+
+Calcular la potencia de salida:
+Potencia de salida = Potencia de entrada * Atenuación
+Potencia de salida = 1 mW * 0.9936 ≈ 0.9936 mW
+
+La potencia de salida de la señal al final de la fibra óptica es de aproximadamente 0.9936 mW.
+
+Recuerda que este ejercicio es solo un ejemplo y puede haber variaciones en las ecuaciones o los valores utilizados según el contexto y la aplicación específica.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+¡Por supuesto! Aquí tienes otro ejercicio resuelto relacionado con la fibra óptica a nivel universitario:
+
+Ejercicio:
+Se desea diseñar un enlace de fibra óptica para transmitir una señal digital a una distancia de 8 km. La tasa de transmisión requerida es de 2 Gbps. La fibra óptica disponible tiene una atenuación de 0.3 dB/km y una dispersión de 17 ps/(nm·km). Calcular la potencia mínima de la señal de entrada y la potencia máxima permitida en el enlace.
+
+Solución:
+
+Calcular la atenuación total del enlace:
+Atenuación total = Atenuación por km * Distancia
+Atenuación total = 0.3 dB/km * 8 km = 2.4 dB
+
+Convertir la atenuación total a unidades lineales:
+Atenuación total = 10^(Atenuación total en dB / 10)
+Atenuación total = 10^(2.4 / 10) ≈ 0.3981
+
+Calcular la dispersión máxima permitida en el enlace:
+Dispersión máxima = Dispersión por km * Distancia
+Dispersión máxima = 17 ps/(nm·km) * 8 km = 136 ps/nm
+
+Calcular la potencia mínima de la señal de entrada:
+Potencia mínima = Potencia máxima permitida * Atenuación total * Dispersión máxima
+Potencia mínima = 1 mW * 0.3981 * 136 ps/nm ≈ 53.982 μW
+
+Calcular la potencia máxima permitida en el enlace:
+Potencia máxima = Potencia mínima / (Atenuación total * Dispersión máxima)
+Potencia máxima = 53.982 μW / (0.3981 * 136 ps/nm) ≈ 3.982 mW
+
+Por lo tanto, la potencia mínima de la señal de entrada en el enlace debe ser de aproximadamente 53.982 μW y la potencia máxima permitida es de aproximadamente 3.982 mW.
+
+Recuerda que este ejercicio es solo un ejemplo y los valores utilizados pueden variar según el contexto y la aplicación específica de la fibra óptica. 

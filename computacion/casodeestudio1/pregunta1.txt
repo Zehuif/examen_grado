@@ -1,0 +1,2 @@
+Se utilizará un diccionario en el cual se guarda la habitación del hotel,
+junto con las fechas ocupadas que es otro diccionario dentro de cada habitación

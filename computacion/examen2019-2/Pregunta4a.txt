@@ -1,0 +1,18 @@
+En este caso, podemos utilizar semáforos y mutex para manejar la sincronización de los partidos en el torneo. La siguiente solución está basada en semáforos y mutex:
+
+Inicializar un semáforo "semRonda" con el valor 0. Este semáforo servirá para controlar cuándo todos los partidos de una ronda han terminado y se debe iniciar la siguiente ronda.
+Inicializar un mutex "mutexHoraActual" para controlar el acceso concurrente a la variable "horaActual".
+Inicializar una variable compartida "partidosTerminados" con el valor 0. Esta variable se utilizará para contar cuántos partidos de la ronda actual han terminado.
+Inicializar una variable "horaActual" con el tiempo de inicio del torneo.
+Para cada ronda en el torneo, crear un hilo que represente cada partido en la ronda y ejecutar los siguientes pasos en el hilo del partido:
+Esperar a que el semáforo "semRonda" esté disponible y luego adquirirlo.
+Bloquear el mutex "mutexHoraActual".
+Establecer el tiempo de inicio del partido como "horaActual".
+Desbloquear el mutex "mutexHoraActual".
+Simular el partido, calculando su duración en minutos (entre 20 y 40 minutos).
+Bloquear el mutex "mutexHoraActual".
+Actualizar la "horaActual" con el tiempo de finalización del partido si este es mayor que el valor actual de "horaActual".
+Incrementar la variable "partidosTerminados".
+Si "partidosTerminados" es igual al número total de partidos en la ronda actual, entonces agregar 30 minutos a "horaActual" para representar el tiempo de descanso entre rondas, y liberar el semáforo "semRonda" tantas veces como partidos haya en la siguiente ronda.
+Desbloquear el mutex "mutexHoraActual".
+El algoritmo finaliza cuando todos los hilos de partidos en todas las rondas han sido completados y sincronizados.

@@ -1,0 +1,9 @@
+pregunta6 - Diego Lagos - Examen de Grado 2023-1
+################################################################################
+El Sistema de acceso al restaurante se hará mediante una solución de estructuras de datos:
+
+Un diccionario (llave->valor) de horarios cada 1 hora desde las 10 am hasta las 10pm, cada valor tiene un diccionario de mesas.
+Cada mesa tiene tres posibles valores: disponible, reservada o ocupada.
+
+Será codeado mediante pseudocodigo (no va a compilar demasiado bien por falta de tiempo) python con preguntas deacuerdo a que se quiere hacer, para la simplicidad del código se asumirá que existen 5 mesas,
+y que el resaurante abre entre 10:00 y 15:00.

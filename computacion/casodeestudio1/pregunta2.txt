@@ -1,0 +1,19 @@
+diagrama chanta de caso de uso en texto:
+
+Usuario 1: cliente.
+cliente -> registrarse
+        -> iniciar sesión   
+        -> consulta de habitaciones por horario y fecha
+        -> reserva de habitación
+        -> cancelación de habitación
+
+Usario 2: trabajador.
+trabajador  -> iniciar sesión
+            -> consulta de habitaciones por horario y fecha
+            -> consulta de habitaciones por cliente
+            -> consulta de clientes
+            -> consulta de clientes por habitación
+            -> cancelación de reserva
+            -> generación de informe de habitaciones por fecha
+            -> generación de informe de clientes por fecha
+            
